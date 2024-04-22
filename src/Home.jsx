@@ -20,7 +20,7 @@ function Home() {
   const fetchRepos = () => {
     fetch(`https://api.github.com/users/azlink2952/repos?per_page=6&page=${currentPage}`, {
       headers: {
-        Authorization: `token $(import.meta.env.VITE_REACT_APP_GITHUB_TOKEN)`,
+        Authorization: `token ${import.meta.env.VITE_REACT_APP_GITHUB_TOKEN}`,
         'Content-Type': 'application/json'
       },})
     .then((response) => (response.json()))
@@ -41,7 +41,7 @@ function Home() {
   useEffect(() => {
     fetch('https://api.github.com/users/azlink2952', {
       headers: {
-        Authorization: `token $(import.meta.env.VITE_REACT_APP_GITHUB_TOKEN)`,
+        Authorization: `token ${import.meta.env.VITE_REACT_APP_GITHUB_TOKEN}`,
         'Content-Type': 'application/json'
       },})
       .then(response => response.json())
@@ -64,7 +64,7 @@ function Home() {
       fetch('https://api.github.com/users/azlink2952', {
         method: 'POST',
         headers: {
-          Authorization: `token $(import.meta.env.VITE_REACT_APP_GITHUB_TOKEN)`,
+          Authorization: `token ${import.meta.env.VITE_REACT_APP_GITHUB_TOKEN}`,
           'Content-Type': 'application/json'
         },
         body: JSON.stringify({
@@ -86,7 +86,7 @@ function Home() {
       fetch(`https://api.github.com/users/azlink2952`, {
         method: 'PATCH',
         headers: {
-          Authorization: `token $(import.meta.env.VITE_REACT_APP_GITHUB_TOKEN)`,
+          Authorization: `token ${import.meta.env.VITE_REACT_APP_GITHUB_TOKEN}`,
           'Content-Type': 'application/json'
         },
         body: JSON.stringify({
@@ -107,7 +107,7 @@ function Home() {
       fetch(`https://api.github.com/users/azlink2952`, {
         method: 'DELETE',
         headers: {
-          Authorization: `token $(import.meta.env.VITE_REACT_APP_GITHUB_TOKEN)`,
+          Authorization: `token ${import.meta.env.VITE_REACT_APP_GITHUB_TOKEN}`,
         },
       })
       .then(response => response.json())
