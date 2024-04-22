@@ -11,7 +11,11 @@ function RepoDetails() {
   const [deployment, setDeployment] = useState({})
  
   useEffect(() => {
-    fetch(`https://api.github.com/repos/azlink252/${id}`)
+    fetch(`https://api.github.com/repos/azlink252/${id}`, {
+      headers: {
+        Authorization: `token $(import.meta.env.VITE_REACT_APP_GITHUB_TOKEN)`,
+        'Content-Type': 'application/json'
+      },})
     .then((response) => (response.json()))
     .then((data) => {
       setDetails(data)
@@ -19,7 +23,11 @@ function RepoDetails() {
   }, []) 
 
   useEffect(() => {
-    fetch(`https://api.github.com/repos/azlink2952/${id}/branches`)
+    fetch(`https://api.github.com/repos/azlink2952/${id}/branches`, {
+      headers: {
+        Authorization: `token $(import.meta.env.VITE_REACT_APP_GITHUB_TOKEN)`,
+        'Content-Type': 'application/json'
+      },})
     .then((response) => (response.json()))
     .then((data) => {
       setBranch(data)
@@ -27,7 +35,11 @@ function RepoDetails() {
   }, []) 
 
   useEffect(() => {
-    fetch(`https://api.github.com/repos/azlink2952/${id}/deployments`)
+    fetch(`https://api.github.com/repos/azlink2952/${id}/deployments`, {
+      headers: {
+        Authorization: `token $(import.meta.env.VITE_REACT_APP_GITHUB_TOKEN)`,
+        'Content-Type': 'application/json'
+      },})
     .then((response) => (response.json()))
     .then((data) => {
       setDeployment(data)
