@@ -21,7 +21,6 @@ function Home() {
     fetch(`https://api.github.com/users/azlink2952/repos?per_page=6&page=${currentPage}`, {
       headers: {
         Authorization: `token ${import.meta.env.VITE_REACT_APP_GITHUB_TOKEN}`,
-        'Content-Type': 'application/json'
       },})
     .then((response) => (response.json()))
     .then((data) => {
