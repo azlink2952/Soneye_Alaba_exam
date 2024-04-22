@@ -19,9 +19,11 @@ function Home() {
 
   const fetchRepos = () => {
     fetch(`https://api.github.com/users/azlink2952/repos?per_page=6&page=${currentPage}`, {
-      headers: {
-        Authorization: `token ${import.meta.env.VITE_REACT_APP_GITHUB_TOKEN}`,
-      },})
+      // headers: {
+      //   Authorization: `token ${import.meta.env.VITE_REACT_APP_GITHUB_TOKEN}`,
+
+      // },
+    })
     .then((response) => (response.json()))
     .then((data) => {
       if (data.length === 0) {
@@ -39,10 +41,11 @@ function Home() {
 
   useEffect(() => {
     fetch('https://api.github.com/users/azlink2952', {
-      headers: {
-        Authorization: `token ${import.meta.env.VITE_REACT_APP_GITHUB_TOKEN}`,
-        'Content-Type': 'application/json'
-      },})
+      // headers: {
+      //   Authorization: `token ${import.meta.env.VITE_REACT_APP_GITHUB_TOKEN}`,
+      //   'Content-Type': 'application/json'
+      // },
+    })
       .then(response => response.json())
       .then(data => setPicture(data.avatar_url));
   }, []);
@@ -62,10 +65,10 @@ function Home() {
     const createRepo = () => {
       fetch('https://api.github.com/users/azlink2952', {
         method: 'POST',
-        headers: {
-          Authorization: `token ${import.meta.env.VITE_REACT_APP_GITHUB_TOKEN}`,
-          'Content-Type': 'application/json'
-        },
+        // headers: {
+        //   Authorization: `token ${import.meta.env.VITE_REACT_APP_GITHUB_TOKEN}`,
+        //   'Content-Type': 'application/json'
+        // },
         body: JSON.stringify({
           name: repoName,
           description: repoDescription
@@ -84,10 +87,10 @@ function Home() {
     const updateRepo = () => {
       fetch(`https://api.github.com/users/azlink2952`, {
         method: 'PATCH',
-        headers: {
-          Authorization: `token ${import.meta.env.VITE_REACT_APP_GITHUB_TOKEN}`,
-          'Content-Type': 'application/json'
-        },
+        // headers: {
+        //   Authorization: `token ${import.meta.env.VITE_REACT_APP_GITHUB_TOKEN}`,
+        //   'Content-Type': 'application/json'
+        // },
         body: JSON.stringify({
           name: repoName,
           description: repoDescription
@@ -105,9 +108,9 @@ function Home() {
     const deleteRepo = () => {
       fetch(`https://api.github.com/users/azlink2952`, {
         method: 'DELETE',
-        headers: {
-          Authorization: `token ${import.meta.env.VITE_REACT_APP_GITHUB_TOKEN}`,
-        },
+        // headers: {
+        //   Authorization: `token ${import.meta.env.VITE_REACT_APP_GITHUB_TOKEN}`,
+        // },
       })
       .then(response => response.json())
       .then(data => {
