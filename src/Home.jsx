@@ -107,12 +107,11 @@ function Home() {
       });
     };
 
-const apiUrl = '(https://api.github.com/users/azlink2952)';
-const apiToken = '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';
 
 
 
-  const userElements = user.filter(filterRepos).map((userElement) => {
+
+const userElements = user.filter(filterRepos).map((userElement) => {
     return (
         <div className="repo-card" key={userElement.id}>
           <div><img src={picture} alt="Profile Picture" /></div>
