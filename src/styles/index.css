@@ -99,7 +99,7 @@ select {
   padding-right: 30px;
 }
 .put::placeholder {
-  color: green;
+  color: rgba(0, 128, 0, 0.781);
   font-size: 12px;
 }
 .filter-container::before {
