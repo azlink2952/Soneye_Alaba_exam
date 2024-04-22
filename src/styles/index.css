@@ -20,6 +20,7 @@
 .repo-name {
   text-decoration: none;
   list-style: none ;
+  font-size: 15px;
   color: #0a65b4;
 }
 .view-more button{
@@ -111,9 +112,6 @@ select {
   background-image: linear-gradient(to bottom, #ddeb26, #010b2c);
   transform: translateZ(100px) scale(1.9);
   opacity: 0.5;
-}
-.view-more {
-  background-color: green;
 }
 
 .repo-container::before {
