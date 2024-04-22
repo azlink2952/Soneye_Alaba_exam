@@ -126,7 +126,9 @@ select {
   opacity: 0.5;
 }
 .repodetail-card {
+  background-color: rgba(0, 128, 0, 0.26);
   padding-bottom: 400px;
+  font-size: 30px;
 }
 .filter-container {
   padding-bottom: 10px;
