@@ -1,0 +1,202 @@
+
+.repo-card {
+  display: flex;
+  background-color: #ffffff;
+  width: 29.99%;
+  margin: 10px;
+  padding: 10px;
+  color: #000000;
+  font-weight: bolder;
+  border: solid 2px black;
+  border-radius: 30px 10px 40px 10px;
+}
+.repo-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+  
+}
+.repo-name {
+  text-decoration: none;
+  list-style: none ;
+  color: #0a65b4;
+}
+.view-more button{
+  width: 10%;
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: bolder;
+  background-color: green;
+  padding: 10px;
+  border: solid 1px green;
+  margin-left: 15px;
+}
+button:hover {
+  background-color: #213547;
+}
+.navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.github-icon {
+  font-size: 30px;
+  padding-right: 20px;
+}
+.repo-card {
+  perspective: 1000px;
+  perspective-origin: 50% 50%;
+  transform-style: preserve-3d;
+  height: 25vh;
+  padding-bottom: 10px;
+  overflow: hidden;
+}
+button {
+  perspective: 100px;
+  perspective-origin: 50% 50%;
+  transform-style: preserve-3d;
+  height: 7vh;
+  overflow: hidden;
+}
+.pros {
+  perspective: 100px;
+  perspective-origin: 50% 50%;
+  transform-style: preserve-3d;
+  height: 7vh;
+  overflow: hidden;
+  padding-bottom: 20px;
+}
+select {
+  perspective: 100px;
+  perspective-origin: 50% 50%;
+  transform-style: preserve-3d;
+  height: 7vh;
+  overflow: hidden;
+  border: solid 2px green;
+  background-color: #ffffff;
+  color: green;
+  border-radius: 20px 0px 10px 4px;
+  padding: 10px;
+}
+.put {
+  perspective: 100px;
+  perspective-origin: 50% 50%;
+  transform-style: preserve-3d;
+  height: 3vh;
+  overflow: hidden;
+  border: solid 2px green;
+  background-color: #ffffff;
+  color: green;
+  border-radius: 40px 20px 40px 40px;
+  padding: 10px;
+}
+.dule {
+  padding-right: 30px;
+}
+.sel1 {
+  padding-right: 30px;
+}
+.put::placeholder {
+  color: green;
+  font-size: 12px;
+}
+.filter-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 69%;
+  height: 100%;
+  background-image: linear-gradient(to bottom, #ddeb26, #010b2c);
+  transform: translateZ(100px) scale(1.9);
+  opacity: 0.5;
+}
+.view-more {
+  background-color: #;
+}
+
+. {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform: translateZ(-100px) scale(1.2);
+  background-image: linear-gradient(to bottom, #1100ff, #ffffff);
+  background-size: 100% 200px;
+  background-position: 0% 100%;
+  transition: transform 0.5s ease-out;
+}
+
+.repo-container::before {
+  content: "";
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(to bottom, #ddeb26, #010b2c);
+  transform: translateZ(100px) scale(1.2);
+  opacity: 0.5;
+}
+.repodetail-card {
+  padding-bottom: 400px;
+}
+.filter-container {
+  padding-bottom: 10px;
+  display: flex;
+  justify-content: right;
+  width: 100%;
+}
+hr {
+  height: 3px;
+  background-color: #011f20be;
+}
+img {
+  width: 80px;
+  padding: 20px 10px 0px 0px;
+}
+.modal {
+  display: none; 
+  position: fixed; 
+  z-index: 1; 
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100%; 
+  overflow: auto; 
+  background-color: rgb(0, 0, 0); 
+  background-color: rgba(0, 0, 0, 0.4); 
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto; 
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
+button {
+  color: green;
+  border: solid 2px green;
+  margin-left: 15px;
+  margin-top: 10px;
+  padding-right: 20px;
+}
+.brov {
+  padding-right: 10px;
+}
+.cont {
+  display: flex;
+  padding-top: 10px;
+}
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  hover {
+    color: white;
+  }
+}
